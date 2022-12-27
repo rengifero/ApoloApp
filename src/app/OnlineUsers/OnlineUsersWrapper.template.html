@@ -1,0 +1,21 @@
+
+
+<div class="onlineUsersWrapper" *ngIf="!loading" style="background-color:rgb(127, 255, 67);">
+    <div class="sliderHeader" style="background-color:powderblue;">
+      Online users - {{onlineUsers.length}}
+    </div>
+  
+    <ng-container *ngFor="let user of onlineUsers; let i = index" [attr.data-index]="i">
+        <OnlineUser [user]="user"></OnlineUser>
+       
+       
+      </ng-container>
+     
+</div>
+
+<div *ngIf="loading">Loading...</div>
+
+<input #msg type="string" name="quant" id="numberQuantity" >
+<button (click)="mensaje( msg.value)">agragar comentario</button> 
+<OtroHijo [rengis]="parentMessage"></OtroHijo>
+

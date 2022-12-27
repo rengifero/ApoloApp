@@ -1,0 +1,7 @@
+{
+    "/api/*": {
+        "target": "http://learn.hasura.io/",
+        "secure": false,
+        "logLevel": "debug"
+    }
+}
